@@ -27,7 +27,7 @@ Install this chart using:
 helm install \
   --namespace minio-operator \
   --create-namespace \
-  minio-operator minio/operator
+  minio-operator minio-operator/operator
 ```
 
 The command deploys MinIO Operator on the Kubernetes cluster in the default configuration.
@@ -39,7 +39,7 @@ Once the MinIO Operator Chart is successfully installed, create a MinIO Tenant u
 
 ```bash
 helm install --namespace tenant-ns \
-  --create-namespace tenant minio/tenant
+  --create-namespace tenant minio-operator/tenant
 ```
 
 This creates a 4 Node MinIO Tenant (cluster). To change the default values, take a look at various [values.yaml](https://github.com/minio/operator/blob/master/helm/tenant/values.yaml).
